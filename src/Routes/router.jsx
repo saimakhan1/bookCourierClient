@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
         Component: Login,
       },
       {
-        path: "/register",
+        path: "register",
         Component: Register,
       },
     ],

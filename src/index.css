@@ -5,3 +5,10 @@
   themes: light --default, dark --prefersdark;
 }
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Leaflet CSS */
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+}

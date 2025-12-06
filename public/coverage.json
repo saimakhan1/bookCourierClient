@@ -1,0 +1,27 @@
+[
+  {
+    "city": "Dhaka",
+    "latitude": 23.8103,
+    "longitude": 90.4125
+  },
+  {
+    "city": "Chittagong",
+    "latitude": 22.3569,
+    "longitude": 91.7832
+  },
+  {
+    "city": "Khulna",
+    "latitude": 22.8456,
+    "longitude": 89.5403
+  },
+  {
+    "city": "Rajshahi",
+    "latitude": 24.3745,
+    "longitude": 88.6042
+  },
+  {
+    "city": "Sylhet",
+    "latitude": 24.8949,
+    "longitude": 91.8687
+  }
+]
