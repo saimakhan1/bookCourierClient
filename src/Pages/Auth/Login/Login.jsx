@@ -1,11 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../hooks/useAuth";
-import { NavLink } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signInUser } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,6 +19,7 @@ const Login = () => {
     return signInUser(data.email, data.password)
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state || "/");
       })
       .catch((error) => {
         console.log(error);
@@ -61,7 +64,11 @@ const Login = () => {
 
         <p>
           New to BookCourier?{" "}
-          <NavLink className={"text-blue-500 underline"} to={"/register"}>
+          <NavLink
+            state={location.state}
+            className={"text-blue-500 underline"}
+            to={"/register"}
+          >
             Register
           </NavLink>
         </p>
