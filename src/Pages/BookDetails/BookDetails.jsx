@@ -65,6 +65,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import OrderModal from "../OrderModal/OrderModal";
+import Swal from "sweetalert2";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -91,6 +92,7 @@ const BookDetails = () => {
       address: form.address.value,
       status: "pending",
       paymentStatus: "unpaid",
+      orderDate: new Date(),
     };
 
     try {
@@ -101,7 +103,13 @@ const BookDetails = () => {
       });
 
       if (res.ok) {
-        alert("Order placed successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Order placed successfully!",
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "OK",
+        });
         setShowModal(false);
       } else {
         alert("Failed to place order");

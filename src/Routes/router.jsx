@@ -9,6 +9,9 @@ import Librarian from "../Pages/Librarian/Librarian";
 import AllBooks from "../Pages/AllBooks/AllBooks";
 import BookDetails from "../Pages/BookDetails/BookDetails";
 import MyProfile from "../Pages/MyProfile/MyProfile";
+import DashboardLayout from "../Layout/DashboardLayout/DashboardLayout";
+import UserDashboard from "../Pages/UserDashboard/UserDashboard";
+import MyOrders from "../Pages/MyOrders/MyOrders";
 
 export const router = createBrowserRouter([
   {
@@ -65,6 +68,32 @@ export const router = createBrowserRouter([
         path: "register",
         Component: Register,
       },
+    ],
+  },
+  {
+    path: "/dashboard",
+    Component: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "my-orders",
+        element: (
+          <PrivateRoute>
+            <MyOrders></MyOrders>
+          </PrivateRoute>
+        ),
+      },
+      // {
+      //   path: "/dashboard/userDashboard",
+      //   element: (
+      //     <PrivateRoute>
+      //       <UserDashboard></UserDashboard>
+      //     </PrivateRoute>
+      //   ),
+      // },
     ],
   },
 ]);
