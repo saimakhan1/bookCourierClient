@@ -1,11 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import bookLogo from "../../../public/bookCourier.jpg";
 import ToggleButton from "../ToggleButton/ToggleButton";
 import useTheme from "../../hooks/useTheme";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme(); // <-- useTheme hook
+
+  const { user, logOut } = useAuth();
+
+  // const handleLogOut = () => {
+  //   logOut.then().catch((error) => {
+  //     console.log(error);
+  //   });
+  // };
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("Logged out successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const links = (
     <>
@@ -61,8 +80,26 @@ const Navbar = () => {
         {/* ✅ Pass theme and toggleTheme */}
         <ToggleButton theme={theme} toggleTheme={toggleTheme} />
 
-        <a className="btn">Log In</a>
-        <a className="btn">Register</a>
+        {user ? (
+          <a onClick={handleLogOut} className="btn">
+            Log Out
+          </a>
+        ) : (
+          <>
+            <Link to={"/login"} className="btn">
+              {" "}
+              Log In
+            </Link>
+            <Link to={"/register"} className="btn">
+              {" "}
+              Register
+            </Link>
+          </>
+        )}
+        <Link to={"/librarian"} className="btn">
+          {" "}
+          Be a Librarian
+        </Link>
       </div>
     </div>
   );
