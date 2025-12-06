@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "price": 28.99,
+    "category": "Programming",
+    "cover": "/book-covers/pragmatic-programmer.jpg",
+    "description": "A must-read guide for modern software engineers with practical advice on coding, careers, and craftsmanship."
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 25.5,
+    "category": "Programming",
+    "cover": "/book-covers/clean-code.jpg",
+    "description": "A handbook of agile software craftsmanship with essential techniques for writing clean, maintainable code."
+  },
+  {
+    "id": 3,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 18.0,
+    "category": "Self-Help",
+    "cover": "/book-covers/atomic-habits.jpg",
+    "description": "A practical framework for building good habits and breaking bad ones using small, consistent improvements."
+  },
+  {
+    "id": 4,
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 12.99,
+    "category": "Fiction",
+    "cover": "/book-covers/1984.jpg",
+    "description": "A dystopian novel exploring themes of surveillance, totalitarianism, and individual freedom."
+  },
+  {
+    "id": 5,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "price": 14.5,
+    "category": "Fiction",
+    "cover": "/book-covers/mockingbird.jpg",
+    "description": "A powerful story about racial injustice, morality, and compassion in the American South."
+  },
+  {
+    "id": 6,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "price": 22.99,
+    "category": "History",
+    "cover": "/book-covers/sapiens.jpg",
+    "description": "A journey through the history of humankind from evolution to modern civilization."
+  },
+  {
+    "id": 7,
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "price": 19.99,
+    "category": "Productivity",
+    "cover": "/book-covers/deep-work.jpg",
+    "description": "Techniques for achieving focused success in a distracted world."
+  },
+  {
+    "id": 8,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 11.99,
+    "category": "Fiction",
+    "cover": "/book-covers/alchemist.jpg",
+    "description": "A spiritual and adventurous tale about following your dreams."
+  },
+  {
+    "id": 9,
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "price": 16.5,
+    "category": "Finance",
+    "cover": "/book-covers/rich-dad.jpg",
+    "description": "Lessons on financial independence and building wealth."
+  },
+  {
+    "id": 10,
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "price": 21.0,
+    "category": "Business",
+    "cover": "/book-covers/lean-startup.jpg",
+    "description": "A guide to building successful startups using lean principles and rapid experimentation."
+  },
+  {
+    "id": 11,
+    "title": "Cracking the Coding Interview",
+    "author": "Gayle Laakmann McDowell",
+    "price": 35.0,
+    "category": "Programming",
+    "cover": "/book-covers/ctci.jpg",
+    "description": "189 programming interview questions with detailed solutions."
+  },
+  {
+    "id": 12,
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "price": 17.99,
+    "category": "Finance",
+    "cover": "/book-covers/psychology-money.jpg",
+    "description": "Timeless lessons on financial decision-making and human behavior."
+  },
+  {
+    "id": 13,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "price": 13.99,
+    "category": "Fantasy",
+    "cover": "/book-covers/hobbit.jpg",
+    "description": "A classic fantasy adventure that sets the stage for the Lord of the Rings trilogy."
+  },
+  {
+    "id": 14,
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "price": 15.99,
+    "category": "Self-Help",
+    "cover": "/book-covers/subtle-art.jpg",
+    "description": "A counterintuitive guide to living a better life by focusing on what truly matters."
+  },
+  {
+    "id": 15,
+    "title": "Harry Potter and the Philosopher’s Stone",
+    "author": "J.K. Rowling",
+    "price": 14.99,
+    "category": "Fantasy",
+    "cover": "/book-covers/hp1.jpg",
+    "description": "The beginning of Harry Potter’s magical journey at Hogwarts School."
+  }
+]

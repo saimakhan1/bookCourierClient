@@ -1,16 +1,31 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Name: BookCourier – Library-to-Home Delivery System
 
-Currently, two official plugins are available:
+## Purpose
+BookCourier is a library delivery management system that allows users to request book pickup or delivery from nearby libraries. It helps students, researchers, and readers borrow and return books without visiting the library physically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+- User authentication with email/password and Google login
+- Responsive design with light/dark mode toggle
+- Home page with banner sliders, latest books, coverage map, and promotional sections
+- All Books page with search and sort functionality
+- Book Details page with order modal, wishlist, and review/rating system
+- User Dashboard: My Orders, My Profile, Invoices, My Wishlist
+- Librarian Dashboard: Add Book, My Books, Manage Orders
+- Admin Dashboard: Manage Users, Manage Books
+- JWT-protected routes for secure access
+- Skeleton loaders for better UX
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## NPM Packages Used
+- react
+- react-dom
+- react-router-dom
+- react-hook-form
+- axios
+- firebase
+- tailwindcss
+- @tanstack/react-query
+- react-icons
