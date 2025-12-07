@@ -41,9 +41,9 @@ const Navbar = () => {
         <NavLink to={"/myProfile"}>My Profile</NavLink>
       </li>
       {user && (
-        <>
+        <li>
           <NavLink to={"/dashboard/my-orders"}>My Orders</NavLink>
-        </>
+        </li>
       )}
     </>
   );
