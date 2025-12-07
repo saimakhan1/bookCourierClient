@@ -88,6 +88,7 @@ const BookDetails = () => {
       bookTitle: book.title,
       userName: user.displayName,
       userEmail: user.email,
+      price: book.price,
       phone: form.phone.value,
       address: form.address.value,
       status: "pending",
