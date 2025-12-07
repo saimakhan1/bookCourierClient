@@ -197,7 +197,7 @@ const Navbar = () => {
       </div>
 
       {/* RIGHT: Toggle + Profile / Auth Buttons */}
-      <div className="navbar-end hidden sm:flex items-center gap-3">
+      <div className="navbar-end hidden md:flex items-center gap-3">
         <ToggleButton theme={theme} toggleTheme={toggleTheme} />
 
         {user ? (

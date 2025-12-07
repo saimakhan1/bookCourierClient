@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router";
 import { FiMenu, FiHome, FiShoppingCart, FiLogOut } from "react-icons/fi";
 import { RiGalleryView2 } from "react-icons/ri";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -51,6 +52,13 @@ const DashboardLayout = () => {
               >
                 <RiGalleryView2 />
                 {sidebarOpen && <span>View All Books</span>}
+              </Link>
+              <Link
+                to="/myProfile"
+                className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+              >
+                <FaRegUserCircle />
+                {sidebarOpen && <span>My Profile</span>}
               </Link>
             </li>
           </ul>
