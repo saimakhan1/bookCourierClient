@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsPinterest,
+  BsTwitter,
+} from "react-icons/bs";
+import { RiInstagramLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -64,6 +71,11 @@ const Footer = () => {
             </h3>
             <div className="flex items-center space-x-6">
               {/* Social icons here */}
+              <BsFacebook></BsFacebook>
+
+              <BsInstagram></BsInstagram>
+              <BsPinterest></BsPinterest>
+              <BsTwitter></BsTwitter>
             </div>
           </div>
         </div>
