@@ -1,20 +1,36 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import axios from "axios";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const MyOrders = () => {
   const { user } = useAuth();
+  const axiosSecure = useAxiosSecure(); // <-- use this
   const [orders, setOrders] = useState([]);
 
   // Fetch user orders
+  // useEffect(() => {
+  //   if (!user?.email) return;
+
+  //   fetch(`http://localhost:3000/orders?email=${user?.email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setOrders(data))
+  //     .catch((err) => console.log(err));
+  // }, [user?.email]);
+
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`http://localhost:3000/orders?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setOrders(data))
-      .catch((err) => console.log(err));
-  }, [user?.email]);
+    axios
+      .get("http://localhost:3000/orders", { params: { email: user.email } })
+      .then((response) => {
+        setOrders(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [user?.email, axiosSecure]);
 
   // Cancel order / Delete order
   const handleCancel = async (orderId) => {
