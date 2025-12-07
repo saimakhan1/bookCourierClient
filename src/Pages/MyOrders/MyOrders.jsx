@@ -62,6 +62,10 @@
 //           <thead className="bg-gray-100">
 //             <tr>
 //               <th className="p-3 border">Book Title</th>
+
+//               {/* 📌 PRICE ADDED */}
+//               <th className="p-3 border">Price</th>
+
 //               <th className="p-3 border">Order Date</th>
 //               <th className="p-3 border">Status</th>
 //               <th className="p-3 border">Actions</th>
@@ -70,20 +74,29 @@
 //           <tbody>
 //             {orders.length === 0 && (
 //               <tr>
-//                 <td colSpan="4" className="text-center p-5">
+//                 <td colSpan="5" className="text-center p-5">
 //                   No orders found.
 //                 </td>
 //               </tr>
 //             )}
+
 //             {orders.map((order) => (
 //               <tr key={order._id} className="text-center">
 //                 <td className="p-3 border">{order.bookTitle}</td>
+
+//                 {/* 📌 SHOW PRICE COMING FROM DATABASE */}
+//                 <td className="p-3 border">
+//                   {order.price ? `${order.price} ৳` : "N/A"}
+//                 </td>
+
 //                 <td className="p-3 border">
 //                   {order.orderDate
 //                     ? new Date(order.orderDate).toLocaleDateString()
 //                     : "N/A"}
 //                 </td>
+
 //                 <td className="p-3 border">{order.status}</td>
+
 //                 <td className="p-3 border flex justify-center gap-2">
 //                   {order.status === "pending" && (
 //                     <>
@@ -93,6 +106,7 @@
 //                       >
 //                         Cancel
 //                       </button>
+
 //                       <button
 //                         onClick={() => handlePayNow(order._id)}
 //                         className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
@@ -101,6 +115,7 @@
 //                       </button>
 //                     </>
 //                   )}
+
 //                   {order.status !== "pending" && <span>-</span>}
 //                 </td>
 //               </tr>
@@ -113,7 +128,6 @@
 // };
 
 // export default MyOrders;
-
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
@@ -177,11 +191,9 @@ const MyOrders = () => {
         <table className="min-w-full border">
           <thead className="bg-gray-100">
             <tr>
+              <th className="p-3 border">#</th> {/* Serial number column */}
               <th className="p-3 border">Book Title</th>
-
-              {/* 📌 PRICE ADDED */}
               <th className="p-3 border">Price</th>
-
               <th className="p-3 border">Order Date</th>
               <th className="p-3 border">Status</th>
               <th className="p-3 border">Actions</th>
@@ -190,31 +202,28 @@ const MyOrders = () => {
           <tbody>
             {orders.length === 0 && (
               <tr>
-                <td colSpan="5" className="text-center p-5">
+                <td colSpan="6" className="text-center p-5">
                   No orders found.
                 </td>
               </tr>
             )}
 
-            {orders.map((order) => (
+            {orders.map((order, index) => (
               <tr key={order._id} className="text-center">
+                <td className="p-3 border">{index + 1}</td>{" "}
+                {/* Serial number */}
                 <td className="p-3 border">{order.bookTitle}</td>
-
-                {/* 📌 SHOW PRICE COMING FROM DATABASE */}
                 <td className="p-3 border">
                   {order.price ? `${order.price} ৳` : "N/A"}
                 </td>
-
                 <td className="p-3 border">
                   {order.orderDate
                     ? new Date(order.orderDate).toLocaleDateString()
                     : "N/A"}
                 </td>
-
                 <td className="p-3 border">{order.status}</td>
-
                 <td className="p-3 border flex justify-center gap-2">
-                  {order.status === "pending" && (
+                  {order.status === "pending" ? (
                     <>
                       <button
                         onClick={() => handleCancel(order._id)}
@@ -222,7 +231,6 @@ const MyOrders = () => {
                       >
                         Cancel
                       </button>
-
                       <button
                         onClick={() => handlePayNow(order._id)}
                         className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
@@ -230,9 +238,9 @@ const MyOrders = () => {
                         Pay Now
                       </button>
                     </>
+                  ) : (
+                    <span>-</span>
                   )}
-
-                  {order.status !== "pending" && <span>-</span>}
                 </td>
               </tr>
             ))}
