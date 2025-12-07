@@ -14,6 +14,7 @@ import UserDashboard from "../Pages/UserDashboard/UserDashboard";
 import MyOrders from "../Pages/MyOrders/MyOrders";
 import Payment from "../Pages/Payment/Payment";
 import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
+import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
 
 export const router = createBrowserRouter([
   {
@@ -101,6 +102,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <PaymentSuccess></PaymentSuccess>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "payment-history",
+        element: (
+          <PrivateRoute>
+            <PaymentHistory></PaymentHistory>
           </PrivateRoute>
         ),
       },
