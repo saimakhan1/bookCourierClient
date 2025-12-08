@@ -15,6 +15,7 @@ import MyOrders from "../Pages/MyOrders/MyOrders";
 import Payment from "../Pages/Payment/Payment";
 import PaymentSuccess from "../Pages/PaymentSuccess/PaymentSuccess";
 import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
+import ApproveLibrarians from "../Pages/Dashboard/ApproveLibrarians/ApproveLibrarians";
 
 export const router = createBrowserRouter([
   {
@@ -112,6 +113,10 @@ export const router = createBrowserRouter([
             <PaymentHistory></PaymentHistory>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "approve-librarians",
+        Component: ApproveLibrarians,
       },
 
       // {

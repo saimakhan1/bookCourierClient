@@ -102,6 +102,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const Librarian = () => {
   const {
@@ -133,45 +134,19 @@ const Librarian = () => {
 
   const handleLibrarianApplication = async (data) => {
     console.log("form data", data);
-    // try {
-    //   const formData = new FormData();
-    //   formData.append("name", data.name);
-    //   formData.append("email", data.email);
-    //   formData.append("password", data.password);
-    //   formData.append("photo", data.photo[0]);
 
-    //   // NEW FIELDS
-    //   formData.append("birthday", data.birthday);
-    //   formData.append("gender", data.gender);
-    //   formData.append("phone", data.phone);
-    //   formData.append("nid", data.nid);
-    //   formData.append("address", data.address);
-    //   formData.append("education", data.education);
-
-    //   const res = await axiosSecure.post("/apply-librarian", formData, {
-    //     headers: { "Content-Type": "multipart/form-data" },
-    //   });
-
-    //   if (res.data.insertedId) {
-    //     Swal.fire({
-    //       title: "Application Submitted!",
-    //       text: "Your librarian application was submitted successfully.",
-    //       icon: "success",
-    //       confirmButtonColor: "#3085d6",
-    //     });
-    //   }
-
-    //   reset();
-    // } catch (error) {
-    //   console.error(error);
-
-    //   Swal.fire({
-    //     title: "Error!",
-    //     text: "Something went wrong. Please try again.",
-    //     icon: "error",
-    //     confirmButtonColor: "#d33",
-    //   });
-    // }
+    axiosSecure.post("/librarians", data).then((res) => {
+      if (res.data.insertedId) {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title:
+            "Your application has been submitted. We will reach out in 30 days",
+          showCancelButton: false,
+          timer: 5000,
+        });
+      }
+    });
   };
 
   return (
