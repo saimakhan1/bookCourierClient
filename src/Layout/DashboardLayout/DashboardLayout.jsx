@@ -6,9 +6,12 @@ import {
   FaBookOpen,
   FaFileInvoiceDollar,
   FaRegUserCircle,
+  FaUser,
 } from "react-icons/fa";
+import UseRole from "../../hooks/UseRole";
 
 const DashboardLayout = () => {
+  const { role } = UseRole();
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
@@ -72,13 +75,25 @@ const DashboardLayout = () => {
                 {sidebarOpen && <span>Invoices</span>}
               </Link>
 
-              <Link
-                to={"approve-librarians"}
-                className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
-              >
-                <FaBookOpen></FaBookOpen>
-                {sidebarOpen && <span>Approve Librarians</span>}
-              </Link>
+              {role === "admin" && (
+                <>
+                  <Link
+                    to={"/dashboard/approve-librarians"}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <FaBookOpen></FaBookOpen>
+                    {sidebarOpen && <span>Approve Librarians</span>}
+                  </Link>
+
+                  <Link
+                    to={`/dashboard/users-management`}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <FaUser></FaUser>
+                    {sidebarOpen && <span>Users Management</span>}
+                  </Link>
+                </>
+              )}
             </li>
           </ul>
         </nav>
