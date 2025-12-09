@@ -143,7 +143,7 @@ const DashboardLayout = () => {
                   >
                     <FaBookReader />
 
-                    {sidebarOpen && <span>My Orders</span>}
+                    {sidebarOpen && <span>Orders For My Books</span>}
                   </Link>
                 </>
               )}

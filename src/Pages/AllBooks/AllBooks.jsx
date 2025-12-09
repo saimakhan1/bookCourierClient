@@ -5,23 +5,6 @@ import { Link } from "react-router";
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/books")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       // Sort books by latest added first (robust to missing/invalid dates)
-  //       const sorted = data.sort((a, b) => {
-  //         const aTime = Date.parse(a.addedDate || a.createdAt || "") || 0;
-  //         const bTime = Date.parse(b.addedDate || b.createdAt || "") || 0;
-  //         return bTime - aTime;
-  //       });
-  //       setBooks(sorted);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Failed to fetch books:", err);
-  //     });
-  // }, []);
-
   useEffect(() => {
     axios
       .get("http://localhost:3000/books")
