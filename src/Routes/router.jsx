@@ -25,6 +25,7 @@ import AddBook from "../Pages/Dashboard/AddBook/AddBook";
 import LibrarianRoute from "./LibrarianRoute";
 import MyBooks from "../Pages/Dashboard/MyBooks/MyBooks";
 import LibrarianOrders from "../Pages/Dashboard/LibrarianOrders/LibrarianOrders";
+import BookWishList from "../Pages/Dashboard/BookWishList/BookWishList";
 
 export const router = createBrowserRouter([
   {
@@ -132,6 +133,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <PaymentHistory></PaymentHistory>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "book-wishlist",
+        element: (
+          <PrivateRoute>
+            <BookWishList></BookWishList>
           </PrivateRoute>
         ),
       },

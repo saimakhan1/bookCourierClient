@@ -82,7 +82,8 @@ const ManageBooks = () => {
             <tr>
               <th>Cover</th>
               <th>Title / Author</th>
-              <th>Owner</th>
+
+              <th>Owner/Librarian Email</th>
               <th>Status</th>
               <th>Actions</th>
               <th>Delete</th>
@@ -103,6 +104,7 @@ const ManageBooks = () => {
                   <div className="font-semibold">{b.title}</div>
                   <div className="text-sm text-gray-600">by {b.author}</div>
                 </td>
+
                 <td>{b.ownerEmail || "—"}</td>
                 <td>
                   {b.status === "published" ? (

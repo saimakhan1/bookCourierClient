@@ -85,9 +85,9 @@ const ApproveLibrarians = () => {
                   </p>
                 </td>
                 <td>
-                  <button>
+                  {/* <button>
                     <FaEye></FaEye>
-                  </button>
+                  </button> */}
                   <button
                     onClick={() => handleApproval(librarian)}
                     className="btn"
@@ -100,9 +100,9 @@ const ApproveLibrarians = () => {
                   >
                     <IoPersonRemove />
                   </button>
-                  <button>
+                  {/* <button>
                     <FaTrash />
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             ))}

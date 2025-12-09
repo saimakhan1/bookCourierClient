@@ -186,6 +186,7 @@ import { SiManageiq } from "react-icons/si";
 import { MdAddBox } from "react-icons/md";
 import { ImBooks } from "react-icons/im";
 import { FaBookReader } from "react-icons/fa";
+import { SiWish } from "react-icons/si";
 import {
   FaBookOpen,
   FaFileInvoiceDollar,
@@ -301,6 +302,15 @@ const DashboardLayout = () => {
               >
                 <FaFileInvoiceDollar />
                 {sidebarOpen && <span>Invoices</span>}
+              </Link>
+              <Link
+                to={"book-wishlist"}
+                className={`flex items-center gap-3 py-2 px-4 rounded hover:bg-gray-200 ${
+                  theme === "dark" ? "hover:bg-gray-700" : ""
+                }`}
+              >
+                <SiWish />
+                {sidebarOpen && <span>My Wishlist</span>}
               </Link>
 
               {role === "admin" && (
