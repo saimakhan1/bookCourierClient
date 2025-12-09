@@ -59,14 +59,14 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/myProfile",
-        element: (
-          <PrivateRoute>
-            <MyProfile></MyProfile>
-          </PrivateRoute>
-        ),
-      },
+      // {
+      //   path: "/myProfile",
+      //   element: (
+      //     <PrivateRoute>
+      //       <MyProfile></MyProfile>
+      //     </PrivateRoute>
+      //   ),
+      // },
     ],
   },
   {
@@ -94,6 +94,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: DashboardHome,
+      },
+      {
+        path: "my-profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "my-orders",
