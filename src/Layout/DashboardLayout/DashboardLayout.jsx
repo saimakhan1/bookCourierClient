@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router";
 import { FiMenu, FiHome, FiShoppingCart, FiLogOut } from "react-icons/fi";
 import { RiGalleryView2 } from "react-icons/ri";
+import { SiManageiq } from "react-icons/si";
+import { MdAddBox } from "react-icons/md";
+import { ImBooks } from "react-icons/im";
+import { FaBookReader } from "react-icons/fa";
 import {
   FaBookOpen,
   FaFileInvoiceDollar,
@@ -9,6 +13,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import useRole from "../../hooks/UseRole";
+import Logo from "../../Components/Logo/Logo";
 
 const DashboardLayout = () => {
   const { role } = useRole();
@@ -38,11 +43,19 @@ const DashboardLayout = () => {
           <ul>
             <li>
               <Link
-                to="/"
+                to={"/"}
+                className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+              >
+                <Logo></Logo>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/dashboard"
                 className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
               >
                 <FiHome />
-                {sidebarOpen && <span>Home Page</span>}
+                {sidebarOpen && <span>Dashboard Home</span>}
               </Link>
             </li>
             <li>
@@ -91,6 +104,46 @@ const DashboardLayout = () => {
                   >
                     <FaUser></FaUser>
                     {sidebarOpen && <span>Users Management</span>}
+                  </Link>
+
+                  <Link
+                    to={`/dashboard/manage-books`}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <SiManageiq />
+
+                    {sidebarOpen && <span>Manage Books</span>}
+                  </Link>
+                </>
+              )}
+
+              {/* Librarian dashboard set up */}
+
+              {role === "librarian" && (
+                <>
+                  <Link
+                    to={"/dashboard/add-book"}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <MdAddBox></MdAddBox>
+                    {sidebarOpen && <span>Add Book</span>}
+                  </Link>
+
+                  <Link
+                    to={`/dashboard/my-books`}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <ImBooks />
+                    {sidebarOpen && <span>My Books</span>}
+                  </Link>
+
+                  <Link
+                    to={`/dashboard/librarian-orders`}
+                    className="flex items-center gap-3 py-2 px-4 hover:bg-gray-200 rounded"
+                  >
+                    <FaBookReader />
+
+                    {sidebarOpen && <span>My Orders</span>}
                   </Link>
                 </>
               )}

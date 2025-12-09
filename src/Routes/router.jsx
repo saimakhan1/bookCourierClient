@@ -19,6 +19,12 @@ import ApproveLibrarians from "../Pages/Dashboard/ApproveLibrarians/ApproveLibra
 import UsersManagement from "../Pages/Dashboard/UserManagement/UsersManagement";
 import AdminRoute from "./AdminRoute";
 import Forbidden from "../Components/Forbidden/Forbidden";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import ManageBooks from "../Pages/Dashboard/ManageBooks/ManageBooks";
+import AddBook from "../Pages/Dashboard/AddBook/AddBook";
+import LibrarianRoute from "./LibrarianRoute";
+import MyBooks from "../Pages/Dashboard/MyBooks/MyBooks";
+import LibrarianOrders from "../Pages/Dashboard/LibrarianOrders/LibrarianOrders";
 
 export const router = createBrowserRouter([
   {
@@ -86,6 +92,10 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
+        index: true,
+        Component: DashboardHome,
+      },
+      {
         path: "my-orders",
         element: (
           <PrivateRoute>
@@ -131,6 +141,38 @@ export const router = createBrowserRouter([
           <AdminRoute>
             <UsersManagement></UsersManagement>
           </AdminRoute>
+        ),
+      },
+      {
+        path: "manage-books",
+        element: (
+          <AdminRoute>
+            <ManageBooks></ManageBooks>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "add-book",
+        element: (
+          <LibrarianRoute>
+            <AddBook></AddBook>
+          </LibrarianRoute>
+        ),
+      },
+      {
+        path: "my-books",
+        element: (
+          <LibrarianRoute>
+            <MyBooks></MyBooks>
+          </LibrarianRoute>
+        ),
+      },
+      {
+        path: "librarian-orders",
+        element: (
+          <LibrarianRoute>
+            <LibrarianOrders></LibrarianOrders>
+          </LibrarianRoute>
         ),
       },
 
