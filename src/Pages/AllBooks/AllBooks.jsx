@@ -44,7 +44,7 @@ const AllBooks = () => {
         {books.map((book) => (
           <div
             key={book._id || book.id}
-            className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col"
+            className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col dark:text-white"
           >
             <img
               src={book.cover}
@@ -52,20 +52,24 @@ const AllBooks = () => {
               className="w-full h-56 object-cover rounded-md"
             />
 
-            <h3 className="text-xl font-semibold mt-3">{book.title}</h3>
-            <p className="text-gray-600">by {book.author}</p>
+            <h3 className="text-xl font-semibold mt-3 dark:text-white">
+              {book.title}
+            </h3>
+            <p className="text-gray-600 dark:text-white">by {book.author}</p>
 
-            <p className="font-bold text-blue-600 mt-2">${book.price}</p>
+            <p className="font-bold text-blue-600 mt-2 dark:text-white">
+              ${book.price}
+            </p>
 
             {/* Publication Date (safely formatted) */}
-            <p className="text-sm text-gray-500 mt-1">
-              <span className="font-semibold">Published:</span>{" "}
+            <p className="text-sm text-gray-500 mt-1 dark:text-white">
+              <span className="font-semibold dark:text-white">Published:</span>{" "}
               {formatDate(book.publicationDate)}
             </p>
 
             {/* Added On / CreatedAt (safely formatted) */}
-            <p className="text-sm text-gray-500">
-              <span className="font-semibold">Added On:</span>{" "}
+            <p className="text-sm text-gray-500 dark:text-white">
+              <span className="font-semibold dark:text-white">Added On:</span>{" "}
               {formatDate(book.createdAt || book.addedDate)}
             </p>
 

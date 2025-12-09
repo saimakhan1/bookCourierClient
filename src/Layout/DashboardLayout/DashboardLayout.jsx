@@ -368,14 +368,13 @@ const DashboardLayout = () => {
                     <FaBookReader />
                     {sidebarOpen && <span>Orders For My Books</span>}
                   </Link>
-
-                  <div className="flex items-center py-2 px-4">
-                    {sidebarOpen && (
-                      <ToggleButton theme={theme} toggleTheme={toggleTheme} />
-                    )}
-                  </div>
                 </>
               )}
+              <div className="flex items-center py-2 px-4">
+                {sidebarOpen && (
+                  <ToggleButton theme={theme} toggleTheme={toggleTheme} />
+                )}
+              </div>
             </li>
           </ul>
         </nav>

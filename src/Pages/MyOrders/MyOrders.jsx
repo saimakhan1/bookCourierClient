@@ -142,15 +142,13 @@
 
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import useTheme from "../../hooks/useTheme";
-import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 import axios from "axios";
 
 const MyOrders = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
-  const { theme } = useTheme(); // <-- Added theme
   const [orders, setOrders] = useState([]);
 
   // Fetch user orders
@@ -204,23 +202,11 @@ const MyOrders = () => {
   };
 
   return (
-    <div
-      className={`p-5 rounded shadow ${
-        theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-900"
-      }`}
-    >
+    <div className="p-5 rounded shadow bg-white text-gray-900 dark:bg-gray-800 dark:text-white">
       <h1 className="text-2xl font-bold mb-5">My Orders</h1>
       <div className="overflow-x-auto">
-        <table
-          className={`min-w-full border ${
-            theme === "dark" ? "border-gray-700" : "border-gray-200"
-          }`}
-        >
-          <thead
-            className={`${
-              theme === "dark" ? "bg-gray-700 text-white" : "bg-gray-100"
-            }`}
-          >
+        <table className="min-w-full border border-gray-200 dark:border-gray-700">
+          <thead className="bg-gray-100 dark:bg-gray-700 dark:text-white">
             <tr>
               <th className="p-3 border">#</th>
               <th className="p-3 border">Book Title</th>
@@ -235,15 +221,12 @@ const MyOrders = () => {
               <tr>
                 <td
                   colSpan="6"
-                  className={`text-center p-5 ${
-                    theme === "dark" ? "text-gray-300" : ""
-                  }`}
+                  className="text-center p-5 text-gray-500 dark:text-gray-300"
                 >
                   No orders found.
                 </td>
               </tr>
             )}
-
             {orders.map((order, index) => (
               <tr key={order._id} className="text-center">
                 <td className="p-3 border">{index + 1}</td>
@@ -261,22 +244,14 @@ const MyOrders = () => {
                   {order.status === "pending" ? (
                     <>
                       <button
+                        className="px-3 py-1 rounded text-white bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700"
                         onClick={() => handleCancel(order._id)}
-                        className={`px-3 py-1 rounded text-white ${
-                          theme === "dark"
-                            ? "bg-red-600 hover:bg-red-700"
-                            : "bg-red-500 hover:bg-red-600"
-                        }`}
                       >
                         Cancel
                       </button>
                       <button
+                        className="px-3 py-1 rounded text-white bg-green-500 hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700"
                         onClick={() => handlePayNow(order._id)}
-                        className={`px-3 py-1 rounded text-white ${
-                          theme === "dark"
-                            ? "bg-green-600 hover:bg-green-700"
-                            : "bg-green-500 hover:bg-green-600"
-                        }`}
                       >
                         Pay Now
                       </button>

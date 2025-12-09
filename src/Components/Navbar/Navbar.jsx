@@ -34,7 +34,7 @@ const Navbar = () => {
             <NavLink to={"/dashboard"}>Dashboard</NavLink>
           </li>
           <li>
-            <NavLink to={"/my-profile"}>My Profile</NavLink>
+            <NavLink to={"dashboard/my-profile"}>My Profile</NavLink>
           </li>
         </>
       )}
