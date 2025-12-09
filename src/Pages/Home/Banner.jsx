@@ -1,48 +1,79 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useNavigate } from "react-router";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-//import 'swiper/css/pagination';
+import "swiper/css/pagination";
 
-// Import required modules
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// Sample book data (replace with backend data later)
+const books = [
+  {
+    id: 1,
+    title: "The Great Adventure",
+    description: "An exciting journey through mysterious lands.",
+    image: "/book4.jpg",
+  },
+  {
+    id: 2,
+    title: "Mystery of the Night",
+    description: "Uncover the secrets hidden in the shadows.",
+    image: "/book5.jpg",
+  },
+  {
+    id: 3,
+    title: "Learning React",
+    description: "Master React with hands-on examples and projects.",
+    image: "/book6.jpg",
+  },
+];
 
-//import images
-import book1 from "/book1.jpg";
-import book2 from "/book2.jpg";
-import book3 from "/book3.jpg";
-
-const brandLogos = [book1, book2, book3];
 const Banner = () => {
+  const navigate = useNavigate();
+
   return (
-    <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={30}
-      slidesPerView={1}
-      grabCursor={true}
-      centeredSlides={true}
-      loop={true}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      pagination={{ clickable: true }}
-      navigation={true}
-    >
-      {brandLogos.map((logo, index) => (
-        <SwiperSlide key={index}>
-          <div className="flex justify-center">
-            <img
-              className="h-[400px] w-[1200px] object-cover rounded-lg"
-              src={logo}
-              alt="brand logo"
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative w-full">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation={true}
+      >
+        {books.map((book) => (
+          <SwiperSlide key={book.id}>
+            <div className="relative w-full h-[500px] md:h-[600px]">
+              {/* Background Image */}
+              <img
+                src={book.image}
+                alt={book.title}
+                className="w-full h-full object-cover brightness-75"
+              />
+
+              {/* Overlay Text */}
+              <div className="absolute inset-0 flex flex-col justify-center items-start md:items-start px-6 md:px-20 text-white">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                  {book.title}
+                </h2>
+                <p className="text-md md:text-lg mb-6 max-w-lg drop-shadow-md">
+                  {book.description}
+                </p>
+                <button
+                  onClick={() => navigate("/books")}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
+                >
+                  Explore Books
+                </button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

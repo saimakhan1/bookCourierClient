@@ -169,7 +169,7 @@ const UsersManagement = () => {
   };
 
   return (
-    <div className="p-4 sm:p-6 md:p-10 bg-gray-50 min-h-screen">
+    <div className="p-4 sm:p-6 md:p-10 bg-gray-50 min-h-screen dark:bg-gray-500 dark:text-gray-200">
       {/* Headline */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center md:text-left">
         User Management <span className="text-blue-500">({users.length})</span>
@@ -182,16 +182,16 @@ const UsersManagement = () => {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search Users..."
-          className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent shadow-sm transition"
+          className="dark:bg-gray-700 w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent shadow-sm transition"
         />
       </div>
 
       {/* Users List */}
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {users.map((user) => (
           <div
             key={user._id}
-            className="bg-white rounded-xl shadow-md p-5 flex flex-col gap-3 hover:shadow-lg transition-shadow duration-300"
+            className="bg-white rounded-xl shadow-md p-5 flex flex-col gap-3 hover:shadow-lg transition-shadow duration-300 dark:bg-gray-600 dark:text-gray-100"
           >
             {/* User Info */}
             <div className="flex items-center gap-4">
@@ -201,10 +201,10 @@ const UsersManagement = () => {
                 className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-gray-200"
               />
               <div className="flex flex-col flex-1">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-700">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-100">
                   {user.name || user.displayName}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-500 break-words">
+                <p className="text-sm sm:text-base text-gray-500 break-words dark:text-gray-100">
                   {user.email}
                 </p>
               </div>
@@ -212,7 +212,10 @@ const UsersManagement = () => {
 
             {/* Current Role */}
             <div className="text-sm sm:text-base text-gray-600 font-medium">
-              Current Role: <span className="text-gray-800">{user.role}</span>
+              Current Role:{" "}
+              <span className="text-gray-800 dark:text-gray-100">
+                {user.role}
+              </span>
             </div>
 
             {/* Action Buttons */}

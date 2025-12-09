@@ -60,7 +60,7 @@ const EditBook = () => {
   if (!book) return <p className="text-center p-10">Book not found</p>;
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow mt-10">
+    <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 dark:text-gray-100 p-8 rounded-lg shadow mt-10">
       <h2 className="text-3xl font-bold mb-6">Edit Book</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

@@ -467,20 +467,20 @@ const BookDetails = () => {
         />
         <div className="flex-1">
           <h1 className="text-3xl font-bold mb-3">{book.title}</h1>
-          <p className="text-gray-700 mb-2">
+          <p className="text-gray-700 mb-2 dark:text-gray-100">
             <strong>Author:</strong> {book.author}
           </p>
-          <p className="text-gray-700 mb-2">
+          <p className="text-gray-700 mb-2 dark:text-gray-100">
             <strong>Price:</strong> ${book.price}
           </p>
-          <p className="text-gray-700 mb-2">
+          <p className="text-gray-700 mb-2 dark:text-gray-100">
             <strong>Publication Date:</strong>{" "}
             {formatDate(book.publicationDate)}
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 mb-4 dark:text-gray-100">
             <strong>Added On:</strong> {formatDate(book.createdAt)}
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 mb-4 dark:text-gray-100">
             <strong>Description:</strong> {book.description}
           </p>
 
@@ -570,7 +570,7 @@ const BookDetails = () => {
         )}
 
         {(!user || !hasOrdered) && reviews.length > 0 && (
-          <p className="mt-4 text-gray-500">
+          <p className="mt-4 text-gray-500 dark:text-gray-100">
             Only users who purchased this book can leave a review.
           </p>
         )}
