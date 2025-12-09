@@ -26,6 +26,7 @@ import LibrarianRoute from "./LibrarianRoute";
 import MyBooks from "../Pages/Dashboard/MyBooks/MyBooks";
 import LibrarianOrders from "../Pages/Dashboard/LibrarianOrders/LibrarianOrders";
 import BookWishList from "../Pages/Dashboard/BookWishList/BookWishList";
+import EditBook from "../Pages/Dashboard/EditBook/EditBook";
 
 export const router = createBrowserRouter([
   {
@@ -173,6 +174,14 @@ export const router = createBrowserRouter([
         element: (
           <LibrarianRoute>
             <AddBook></AddBook>
+          </LibrarianRoute>
+        ),
+      },
+      {
+        path: "/dashboard/edit-book/:id",
+        element: (
+          <LibrarianRoute>
+            <EditBook></EditBook>
           </LibrarianRoute>
         ),
       },
