@@ -10,7 +10,7 @@ import { time } from "framer-motion";
 const ApproveLibrarians = () => {
   const axiosSecure = useAxiosSecure();
   const { refetch, data: librarians = [] } = useQuery({
-    queryKey: ["riders", "pending"],
+    queryKey: ["librarians", "pending"],
     queryFn: async () => {
       const res = await axiosSecure.get("/librarians");
       return res.data;

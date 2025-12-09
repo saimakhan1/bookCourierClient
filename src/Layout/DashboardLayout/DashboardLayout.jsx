@@ -8,10 +8,10 @@ import {
   FaRegUserCircle,
   FaUser,
 } from "react-icons/fa";
-import UseRole from "../../hooks/UseRole";
+import useRole from "../../hooks/UseRole";
 
 const DashboardLayout = () => {
-  const { role } = UseRole();
+  const { role } = useRole();
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
