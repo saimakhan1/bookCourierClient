@@ -52,8 +52,9 @@ const UsersManagement = () => {
   };
   return (
     <div>
-      <h2 className="text-4xl">Manage Users:{users.length}</h2>
-      <p>Search Text: {searchText}</p>
+      <h2 className="text-4xl">All Users:{users.length}</h2>
+      {/* <p>Search Text: {searchText}</p> */}
+      <p className="text-2xl font-bold">Search Text</p>
       <label className="input">
         <svg
           className="h-[1em] opacity-50"
@@ -89,7 +90,6 @@ const UsersManagement = () => {
               <th>Email</th>
               <th>Role</th>
               <th>Admin Actions</th>
-              <th>Other Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -132,11 +132,6 @@ const UsersManagement = () => {
                     </button>
                   )}
                 </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">
-                    other actions
-                  </button>
-                </th>
               </tr>
             ))}
           </tbody>

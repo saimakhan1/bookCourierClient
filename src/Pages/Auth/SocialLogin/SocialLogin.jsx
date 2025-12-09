@@ -18,7 +18,7 @@ const SocialLogin = () => {
         //create user in the database
         const userInfo = {
           email: result.user.email,
-          displayName: result.user.name,
+          name: result.user.name || result.user.displayName,
           photoURL: result.user.photoURL,
         };
 

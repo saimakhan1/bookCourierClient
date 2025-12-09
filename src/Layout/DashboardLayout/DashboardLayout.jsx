@@ -322,7 +322,7 @@ const DashboardLayout = () => {
                     }`}
                   >
                     <FaUser />
-                    {sidebarOpen && <span>Users Management</span>}
+                    {sidebarOpen && <span>All Users</span>}
                   </Link>
 
                   <Link
