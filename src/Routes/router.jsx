@@ -201,15 +201,6 @@ export const router = createBrowserRouter([
           </LibrarianRoute>
         ),
       },
-
-      // {
-      //   path: "/dashboard/userDashboard",
-      //   element: (
-      //     <PrivateRoute>
-      //       <UserDashboard></UserDashboard>
-      //     </PrivateRoute>
-      //   ),
-      // },
     ],
   },
 ]);

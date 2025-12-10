@@ -3,12 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Sample book data (replace with backend data later)
 const books = [
   {
     id: 1,

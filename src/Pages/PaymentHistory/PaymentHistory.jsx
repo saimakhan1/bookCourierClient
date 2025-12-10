@@ -56,7 +56,7 @@ const PaymentHistory = () => {
         </table>
       </div>
 
-      {/* MOBILE CARD VIEW (sm & below) */}
+      {/* MOBILE CARD VIEW FOR SM & BELOW) */}
       <div className="md:hidden mt-4 space-y-4 bg-gray-200 dark:bg-gray-800 text-black dark:text-white">
         {payments.map((payment) => (
           <div
