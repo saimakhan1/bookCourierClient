@@ -27,6 +27,7 @@ import MyBooks from "../Pages/Dashboard/MyBooks/MyBooks";
 import LibrarianOrders from "../Pages/Dashboard/LibrarianOrders/LibrarianOrders";
 import BookWishList from "../Pages/Dashboard/BookWishList/BookWishList";
 import EditBook from "../Pages/Dashboard/EditBook/EditBook";
+import OrdersLineChart from "../Pages/Dashboard/OrdersLineChart/OrdersLineChart";
 
 export const router = createBrowserRouter([
   {
@@ -142,6 +143,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <BookWishList></BookWishList>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "book-chart",
+        element: (
+          <PrivateRoute>
+            <OrdersLineChart></OrdersLineChart>
           </PrivateRoute>
         ),
       },

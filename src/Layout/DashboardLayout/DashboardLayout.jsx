@@ -5,7 +5,7 @@ import { RiGalleryView2 } from "react-icons/ri";
 import { SiManageiq } from "react-icons/si";
 import { MdAddBox } from "react-icons/md";
 import { ImBooks } from "react-icons/im";
-import { FaBookReader } from "react-icons/fa";
+import { FaBookReader, FaChartLine } from "react-icons/fa";
 import { SiWish } from "react-icons/si";
 import logo from "../../../public/bookCourier.jpg";
 import {
@@ -135,6 +135,15 @@ const DashboardLayout = () => {
               >
                 <SiWish />
                 {sidebarOpen && <span>My Wishlist</span>}
+              </Link>
+              <Link
+                to={"book-chart"}
+                className={`flex items-center gap-3 py-2 px-4 rounded hover:bg-gray-200 ${
+                  theme === "dark" ? "hover:bg-gray-700" : ""
+                }`}
+              >
+                <FaChartLine></FaChartLine>
+                {sidebarOpen && <span>Review in a Chart</span>}
               </Link>
 
               {role === "admin" && (
