@@ -21,8 +21,6 @@ BookCourier is a library delivery management system that allows users to request
 
 ## NPM Packages Used
 - react
-- react-dom
-- react-router-dom
 - react-hook-form
 - axios
 - firebase
