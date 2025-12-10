@@ -11,9 +11,12 @@ const BookWishlist = () => {
   const fetchWishlist = async () => {
     try {
       const idToken = await auth.currentUser.getIdToken(true);
-      const res = await fetch("http://localhost:3000/wishlist", {
-        headers: { Authorization: `Bearer ${idToken}` },
-      });
+      const res = await fetch(
+        "https://book-courier-server.vercel.app/wishlist",
+        {
+          headers: { Authorization: `Bearer ${idToken}` },
+        }
+      );
       const data = await res.json();
       setWishlist(data);
     } catch (err) {
@@ -24,10 +27,13 @@ const BookWishlist = () => {
   const handleRemove = async (bookId) => {
     try {
       const idToken = await auth.currentUser.getIdToken(true);
-      const res = await fetch(`http://localhost:3000/wishlist/${bookId}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${idToken}` },
-      });
+      const res = await fetch(
+        `https://book-courier-server.vercel.app/wishlist/${bookId}`,
+        {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${idToken}` },
+        }
+      );
       if (res.ok) {
         Swal.fire("Removed", "Book removed from wishlist", "success");
         setWishlist((prev) => prev.filter((item) => item.bookId !== bookId));
@@ -57,8 +63,12 @@ const BookWishlist = () => {
               className="w-full h-48 object-cover mb-3 rounded"
             />
             <h2 className="text-xl font-semibold">{item.bookDetails.title}</h2>
-            <p className="text-gray-700">{item.bookDetails.author}</p>
-            <p className="text-gray-700">${item.bookDetails.price}</p>
+            <p className="text-gray-700 dark:text-white">
+              {item.bookDetails.author}
+            </p>
+            <p className="text-gray-700 dark:text-white">
+              ${item.bookDetails.price}
+            </p>
             <button
               onClick={() => handleRemove(item.bookId)}
               className="mt-3 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"

@@ -12,7 +12,7 @@
 //   } = useQuery({
 //     queryKey: ["orders", orderId],
 //     queryFn: async () => {
-//       const res = await fetch(`http://localhost:3000/orders/${orderId}`);
+//       const res = await fetch(`https://book-courier-server.vercel.app/orders/${orderId}`);
 //       if (!res.ok) throw new Error("Failed to fetch order");
 //       return res.json();
 //     },
@@ -21,7 +21,7 @@
 
 //   const handlePayment = async () => {
 //     try {
-//       const res = await fetch("http://localhost:3000/create-checkout-session", {
+//       const res = await fetch("https://book-courier-server.vercel.app/create-checkout-session", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -76,7 +76,9 @@ const Payment = () => {
   } = useQuery({
     queryKey: ["orders", orderId],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/orders/${orderId}`);
+      const res = await fetch(
+        `https://book-courier-server.vercel.app/orders/${orderId}`
+      );
       if (!res.ok) throw new Error("Failed to fetch order");
       return res.json();
     },
@@ -87,16 +89,19 @@ const Payment = () => {
     if (!order) return;
 
     try {
-      const res = await fetch("http://localhost:3000/checkout-session", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          orderId: order._id,
-          userEmail: order.userEmail, // must include email
-        }),
-      });
+      const res = await fetch(
+        "https://book-courier-server.vercel.app/checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            orderId: order._id,
+            userEmail: order.userEmail, // must include email
+          }),
+        }
+      );
 
       if (!res.ok) {
         const text = await res.text();

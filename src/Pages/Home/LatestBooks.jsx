@@ -58,7 +58,7 @@ const LatestBooks = () => {
               </p>
               <button
                 onClick={() => navigate(`/books/${book._id}`)}
-                className="bg-gray-400 dark:bg-blue-700 mt-auto hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition"
+                className="bg-blue-700 mt-auto hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition"
               >
                 View Details
               </button>
@@ -70,7 +70,7 @@ const LatestBooks = () => {
       <div className="text-center mt-10">
         <button
           onClick={() => navigate("/books")}
-          className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 hover:bg-blue-300  px-6 py-3 rounded-lg font-semibold transition"
+          className="bg-blue-700 text-gray-800 dark:text-gray-100 hover:bg-blue-300  px-6 py-3 rounded-lg font-semibold transition"
         >
           See All Books
         </button>

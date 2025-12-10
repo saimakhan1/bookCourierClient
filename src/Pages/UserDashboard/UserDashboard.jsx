@@ -10,7 +10,7 @@ const UserDashboard = () => {
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`http://localhost:3000/orders?email=${user?.email}`)
+    fetch(`https://book-courier-server.vercel.app/orders?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
       .catch((err) => console.log(err));
@@ -31,9 +31,12 @@ const UserDashboard = () => {
 
     if (result.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:3000/orders/${orderId}`, {
-          method: "DELETE",
-        });
+        const res = await fetch(
+          `https://book-courier-server.vercel.app/orders/${orderId}`,
+          {
+            method: "DELETE",
+          }
+        );
 
         if (res.ok) {
           // Remove the order from state

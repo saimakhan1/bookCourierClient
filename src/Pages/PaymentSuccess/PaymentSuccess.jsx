@@ -13,7 +13,7 @@ const PaymentSuccess = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3000/payment-success?session_id=${sessionId}`,
+          `https://book-courier-server.vercel.app/payment-success?session_id=${sessionId}`,
           {
             method: "PATCH",
           }

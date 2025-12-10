@@ -134,9 +134,7 @@ const Register = () => {
               Password must have at least one uppercase and one lowercase letter
             </p>
           )}
-          <div>
-            <a className="link link-hover">Forgot password?</a>
-          </div>
+          <div></div>
           <button className="btn btn-neutral mt-4">Register</button>
         </fieldset>
 

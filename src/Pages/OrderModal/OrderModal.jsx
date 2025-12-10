@@ -4,7 +4,7 @@ const OrderModal = ({ isOpen, setIsOpen, user, book, handlePlaceOrder }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-white dark:bg-gray-950 bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white dark:text-gray-100 dark:bg-gray-800 p-6 rounded-lg w-96 shadow-lg">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Order: {book.title}

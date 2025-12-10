@@ -174,6 +174,14 @@ const UsersManagement = () => {
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center md:text-left">
         User Management <span className="text-blue-500">({users.length})</span>
       </h2>
+      <p>
+        Sanaya Sabrin is the highest-level and permanent admin, so her role
+        cannot be changed to Librarian. For other users, you may assign either
+        the Librarian or Admin role. Please note that if an Admin is reassigned
+        as a Librarian, they will lose their Admin privileges, and if a
+        Librarian is reassigned as an Admin, they will lose their Librarian
+        role.
+      </p>
 
       {/* Search */}
       <div className="mb-6 max-w-lg mx-auto md:mx-0">
