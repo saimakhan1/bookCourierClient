@@ -1,6 +1,11 @@
 
 # Project Name: BookCourier – Library-to-Home Delivery System
 
+# From Dashboard, you can click the logo and website name if you want to back to Home page
+
+# If You buy a book (with payment), then you will able to post it's Review
+
+
 ## Purpose
 BookCourier is a library delivery management system that allows users to request book pickup or delivery from nearby libraries. It helps students, researchers, and readers borrow and return books without visiting the library physically.
 

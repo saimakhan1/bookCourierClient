@@ -74,42 +74,46 @@ const AllBooks = () => {
       {/* Books Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {displayedBooks.map((book) => (
-          <div
-            key={book._id || book.id}
-            className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col dark:text-white"
-          >
-            <img
-              src={book.cover}
-              alt={book.title}
-              className="w-full h-56 object-cover rounded-md"
-            />
-
-            <h3 className="text-xl font-semibold mt-3 dark:text-white">
-              {book.title}
-            </h3>
-            <p className="text-gray-600 dark:text-white">by {book.author}</p>
-
-            <p className="font-bold text-blue-600 mt-2 dark:text-white">
-              ${book.price}
-            </p>
-
-            <p className="text-sm text-gray-500 mt-1 dark:text-white">
-              <span className="font-semibold dark:text-white">Published:</span>{" "}
-              {formatDate(book.publicationDate)}
-            </p>
-
-            <p className="text-sm text-gray-500 dark:text-white">
-              <span className="font-semibold dark:text-white">Added On:</span>{" "}
-              {formatDate(book.createdAt || book.addedDate)}
-            </p>
-
-            <Link
-              to={`/books/${book._id || book.id}`}
-              className="mt-4 inline-block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+          <Link to={`/books/${book._id || book.id}`}>
+            <div
+              key={book._id || book.id}
+              className="border rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col dark:text-white"
             >
-              View Details
-            </Link>
-          </div>
+              <img
+                src={book.cover}
+                alt={book.title}
+                className="w-full h-56 object-cover rounded-md"
+              />
+
+              <h3 className="text-xl font-semibold mt-3 dark:text-white">
+                {book.title}
+              </h3>
+              <p className="text-gray-600 dark:text-white">by {book.author}</p>
+
+              <p className="font-bold text-blue-600 mt-2 dark:text-white">
+                ${book.price}
+              </p>
+
+              <p className="text-sm text-gray-500 mt-1 dark:text-white">
+                <span className="font-semibold dark:text-white">
+                  Published:
+                </span>{" "}
+                {formatDate(book.publicationDate)}
+              </p>
+
+              <p className="text-sm text-gray-500 dark:text-white">
+                <span className="font-semibold dark:text-white">Added On:</span>{" "}
+                {formatDate(book.createdAt || book.addedDate)}
+              </p>
+
+              <Link
+                to={`/books/${book._id || book.id}`}
+                className="mt-4 inline-block text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                View Details
+              </Link>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

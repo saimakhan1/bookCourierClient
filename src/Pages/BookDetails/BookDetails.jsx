@@ -196,6 +196,10 @@ const BookDetails = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-5">
+      <h2 className="text-xl text-blue-800 font-bold my-2 dark:text-gray-200 mb-7">
+        If you buy a book (with payment), you will be able to post a review of
+        that book.
+      </h2>
       <div className="flex flex-col md:flex-row gap-6">
         <img
           src={book.cover || book.image}

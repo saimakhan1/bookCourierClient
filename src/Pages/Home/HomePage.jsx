@@ -5,6 +5,7 @@ import WhyChoose from "./WhyChoose";
 import Testimonials from "./Testimonials";
 import Categories from "./Categories";
 import LatestBooks from "./LatestBooks";
+import HowItWorksSection from "./HowItWorksSection";
 
 const HomePage = () => {
   return (
@@ -14,8 +15,8 @@ const HomePage = () => {
       <Coverage></Coverage>
       <WhyChoose></WhyChoose>
       <Testimonials></Testimonials>
-      <WhyChoose></WhyChoose>
       <Categories></Categories>
+      <HowItWorksSection></HowItWorksSection>
     </div>
   );
 };

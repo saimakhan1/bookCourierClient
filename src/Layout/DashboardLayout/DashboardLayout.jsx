@@ -216,6 +216,10 @@ const DashboardLayout = () => {
 
       {/* Main content */}
       <main className="flex-1 p-5">
+        <p className="text-center text-blue-800 dark:text-gray-200 font-bold my-7">
+          To go to the website’s homepage, please click on the logo or website
+          name in the dashboard.
+        </p>
         <Outlet />
       </main>
     </div>
