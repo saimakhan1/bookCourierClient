@@ -172,7 +172,7 @@ const UsersManagement = () => {
     <div className="p-4 sm:p-6 md:p-10 bg-gray-50 min-h-screen dark:bg-gray-500 dark:text-gray-200">
       {/* Headline */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center md:text-left">
-        User Management <span className="text-blue-500">({users.length})</span>
+        All Users <span className="text-blue-500">({users.length})</span>
       </h2>
       <p>
         Sanaya Sabrin is the highest-level and permanent admin, so her role
