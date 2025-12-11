@@ -14,6 +14,9 @@ const data = [
   { date: "2025-12-01", orders: 10 },
   { date: "2025-12-02", orders: 15 },
   { date: "2025-12-03", orders: 12 },
+  { date: "2025-12-04", orders: 13 },
+  { date: "2025-12-05", orders: 17 },
+  { date: "2025-12-06", orders: 16 },
 ];
 
 const OrdersLineChart = () => (
