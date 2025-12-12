@@ -32,3 +32,13 @@ BookCourier is a library delivery management system that allows users to request
 - tailwindcss
 - @tanstack/react-query
 - react-icons
+
+# Important Notes:
+* A user can have only one role at a time — user, admin, or librarian.
+* If a librarian is assigned the admin role, their new role becomes admin, and the previous librarian role will be automatically removed.
+* Similarly, if an admin is assigned the librarian role, their new role becomes librarian, and the previous admin role will be removed.
+
+** Sanaya Sabrin is a permanent admin.
+** Sanaya Sabrin's role cannot be changed.
+** Sanaya Sabrin cannot be assigned the librarian role under any circumstance.
+** Sanaya Sabrin's admin role cannot be removed
