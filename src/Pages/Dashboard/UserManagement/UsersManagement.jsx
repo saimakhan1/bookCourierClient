@@ -175,12 +175,20 @@ const UsersManagement = () => {
         All Users <span className="text-blue-500">({users.length})</span>
       </h2>
       <p>
-        Sanaya Sabrin is the highest-level and permanent admin, so her role
-        cannot be changed to Librarian. For other users, you may assign either
-        the Librarian or Admin role. Please note that if an Admin is reassigned
-        as a Librarian, they will lose their Admin privileges, and if a
-        Librarian is reassigned as an Admin, they will lose their Librarian
-        role.
+        <span className="font-bold"> Important Notes:</span>
+        <br /> * A user can have only one role at a time — user, admin, or
+        librarian. <br />* If a librarian is assigned the "admin" role, their
+        new role becomes "admin", and the previous "librarian" role will be
+        automatically removed. <br />* Similarly, if an admin is assigned the
+        "librarian" role, their new role becomes "librarian", and the previous
+        "admin" role will be removed.
+        <br />
+        <span className="font-bold underline">
+          Exception for Sanaya Sabrin:{" "}
+        </span>
+        Sanaya Sabrin is a permanent admin. Sanaya Sabrin's role cannot be
+        changed. Sanaya Sabrin cannot be assigned the "librarian" role under any
+        circumstance. Sanaya Sabrin's "admin" role cannot be removed.
       </p>
 
       {/* Search */}
