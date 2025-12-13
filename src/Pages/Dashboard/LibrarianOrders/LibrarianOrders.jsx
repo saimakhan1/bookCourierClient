@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
@@ -76,8 +78,10 @@ const LibrarianOrders = () => {
     }
   };
 
+  // Updated for the paid status ***
   const statusFlow = {
     pending: "shipped",
+    paid: "shipped",
     shipped: "delivered",
     delivered: "delivered",
   };
@@ -94,9 +98,9 @@ const LibrarianOrders = () => {
         </p>
       ) : (
         <>
-          {/* TABLE (Desktop + Tablet: md and larger) */}
+          {/* TABLE VIEW */}
           <div className="overflow-x-auto hidden md:block">
-            <table className="min-w-full border border-gray-200 dark:border-gray-700 text-left">
+            <table className="min-w-full border border-gray-200 dark:border-gray-700">
               <thead className="bg-gray-100 dark:bg-gray-800">
                 <tr>
                   <th className="px-4 py-2 border-b">Book</th>
@@ -111,7 +115,7 @@ const LibrarianOrders = () => {
               </thead>
               <tbody>
                 {orders.map((order) => (
-                  <tr key={order._id} className="border-b dark:border-gray-700">
+                  <tr key={order._id} className="border-b">
                     <td className="px-4 py-2">{order.bookTitle}</td>
                     <td className="px-4 py-2">{order.userName}</td>
                     <td className="px-4 py-2">{order.userEmail}</td>
@@ -133,6 +137,7 @@ const LibrarianOrders = () => {
                           Mark as {statusFlow[order.status]}
                         </button>
                       )}
+
                       <button
                         onClick={() => handleCancelOrder(order._id)}
                         className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
@@ -146,34 +151,20 @@ const LibrarianOrders = () => {
             </table>
           </div>
 
-          {/* MOBILE CARD VIEW (sm and below) */}
+          {/* MOBILE VIEW */}
           <div className="md:hidden space-y-4">
             {orders.map((order) => (
               <div
                 key={order._id}
-                className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-800 shadow"
+                className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-800"
               >
-                <p className="font-bold text-lg mb-1">{order.bookTitle}</p>
-
-                <p className="text-sm">
-                  <strong>Ordered By:</strong> {order.userName}
-                </p>
-                <p className="text-sm">
-                  <strong>Email:</strong> {order.userEmail}
-                </p>
-                <p className="text-sm">
-                  <strong>Price:</strong> {order.price} BDT
-                </p>
-                <p className="text-sm">
-                  <strong>Phone:</strong> {order.phone}
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Address:</strong> {order.address}
-                </p>
-
-                <p className="text-sm mb-2">
-                  <strong>Status:</strong> {order.status}
-                </p>
+                <p className="font-bold text-lg">{order.bookTitle}</p>
+                <p><strong>Ordered By:</strong> {order.userName}</p>
+                <p><strong>Email:</strong> {order.userEmail}</p>
+                <p><strong>Price:</strong> {order.price} BDT</p>
+                <p><strong>Phone:</strong> {order.phone}</p>
+                <p><strong>Address:</strong> {order.address}</p>
+                <p className="capitalize"><strong>Status:</strong> {order.status}</p>
 
                 <div className="flex flex-col gap-2 mt-3">
                   {order.status !== "delivered" && (
@@ -181,7 +172,7 @@ const LibrarianOrders = () => {
                       onClick={() =>
                         handleChangeStatus(order._id, statusFlow[order.status])
                       }
-                      className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded"
+                      className="bg-blue-500 text-white py-2 rounded"
                     >
                       Mark as {statusFlow[order.status]}
                     </button>
@@ -189,7 +180,7 @@ const LibrarianOrders = () => {
 
                   <button
                     onClick={() => handleCancelOrder(order._id)}
-                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-2 rounded"
+                    className="bg-red-500 text-white py-2 rounded"
                   >
                     Cancel
                   </button>
