@@ -91,6 +91,7 @@ const LibrarianOrders = () => {
       <h2 className="text-3xl font-bold mb-5 text-gray-900 dark:text-gray-100">
         Orders for My Books ({orders.length})
       </h2>
+      <p className="font-bold">This page is mainly for the librarians. </p>
 
       {orders.length === 0 ? (
         <p className="text-gray-600 dark:text-gray-300 mt-10 text-lg">

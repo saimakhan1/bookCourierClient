@@ -67,6 +67,7 @@ const MyOrders = () => {
   return (
     <div className="p-5 rounded shadow bg-white text-gray-900 dark:bg-gray-800 dark:text-white">
       <h1 className="text-2xl font-bold mb-5">My Orders</h1>
+       <p className=" font-bold mb-5">This page is for all (users, admins, librarians).<br/>Everyone can order books. </p>
 
       {/* TABLE (Hidden on mobile, visible from md and above) */}
       <div className="overflow-x-auto hidden md:block">
