@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-10 pt-5 text-center text-sm text-gray-600 dark:text-gray-400">
-          © 2025 BookCourier. All rights reserved.
+          © 2026 BookCourier. All rights reserved.
         </div>
       </footer>
     </div>

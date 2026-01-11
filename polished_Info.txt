@@ -1,0 +1,26 @@
+____________________________________________________________________________
+______________________________________________________
+
+Live Website URL: https://bookcourier-fa15f.web.app/
+______________________________________________________
+
+GitHub Repository Link (below):
+
+Frontend Code-- Repository link: https://github.com/saimakhan1/bookCourierClient
+
+Backend Code-- Repository Link:	 https://github.com/saimakhan1/bookCourierServer 
+________________________________________________
+
+Demo Credentials:
+
+User Email: abid@gmail.com
+User Password: abid1A
+_________________________________
+Admin Email: sanaya@gmail.com
+Admin Password: sanaya1A
+________________________________
+Librarian Email: ashiq@gmail.com
+Librarian Password: ashiq1A
+________________________________
+__________________________________________________________________________________
+
