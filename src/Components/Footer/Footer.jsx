@@ -20,7 +20,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-gray-800 dark:hover:text-white transition-colors"
                 >
                   Home
@@ -28,13 +28,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/books"
                   className="hover:text-gray-800 dark:hover:text-white transition-colors"
                 >
                   Browse Books
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="hover:text-gray-800 dark:hover:text-white transition-colors"
@@ -49,7 +49,7 @@ const Footer = () => {
                 >
                   My Account
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -71,11 +71,11 @@ const Footer = () => {
             </h3>
             <div className="flex items-center space-x-6">
               {/* Social icons here */}
-              <BsFacebook></BsFacebook>
+              <a href="https://www.facebook.com/hashtag/bookcourier/?_rdr"><BsFacebook></BsFacebook></a>
 
-              <BsInstagram></BsInstagram>
-              <BsPinterest></BsPinterest>
-              <BsTwitter></BsTwitter>
+              <a href="https://www.instagram.com/bookcourier/"><BsInstagram></BsInstagram></a>
+              <a href="https://fr.pinterest.com/pin/594686325789374515/"><BsPinterest></BsPinterest></a>
+              <a href="https://x.com/expressairlogis"><BsTwitter></BsTwitter></a>
             </div>
           </div>
         </div>

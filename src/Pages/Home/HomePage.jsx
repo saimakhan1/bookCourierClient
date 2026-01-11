@@ -6,6 +6,12 @@ import Testimonials from "./Testimonials";
 import Categories from "./Categories";
 import LatestBooks from "./LatestBooks";
 import HowItWorksSection from "./HowItWorksSection";
+import Features from "../Features/Features";
+import Highlights from "./Highlights";
+import Statistics from "./Statistics";
+import Newsletter from "./Newsletter";
+import FAQ from "./FAQ";
+import CallToAction from "./CallToAction";
 
 const HomePage = () => {
   return (
@@ -17,6 +23,11 @@ const HomePage = () => {
       <Testimonials></Testimonials>
       <Categories></Categories>
       <HowItWorksSection></HowItWorksSection>
+      <Highlights></Highlights>
+      <Statistics></Statistics>
+      <Newsletter></Newsletter>
+      <FAQ></FAQ>
+      <CallToAction></CallToAction>
     </div>
   );
 };

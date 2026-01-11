@@ -18,6 +18,7 @@ import useRole from "../../hooks/UseRole";
 import Logo from "../../Components/Logo/Logo";
 import ToggleButton from "../../Components/ToggleButton/ToggleButton";
 import useTheme from "../../hooks/useTheme";
+import Navbar from "../../Components/Navbar/Navbar"
 
 const DashboardLayout = () => {
   const { theme, toggleTheme } = useTheme();
@@ -25,7 +26,9 @@ const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <div
+    <div>
+      <Navbar></Navbar>
+      <div
       className={`flex min-h-screen ${
         theme === "dark"
           ? "bg-gray-900 text-white"
@@ -231,6 +234,7 @@ const DashboardLayout = () => {
         </p>
         <Outlet />
       </main>
+    </div>
     </div>
   );
 };

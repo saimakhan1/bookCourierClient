@@ -28,6 +28,11 @@ import LibrarianOrders from "../Pages/Dashboard/LibrarianOrders/LibrarianOrders"
 import BookWishList from "../Pages/Dashboard/BookWishList/BookWishList";
 import EditBook from "../Pages/Dashboard/EditBook/EditBook";
 import OrdersLineChart from "../Pages/Dashboard/OrdersLineChart/OrdersLineChart";
+import About from "../Pages/About/About";
+import Blog from "../Pages/Blog/Blog";
+import Privacy from "../Pages/Privacy/Privacy";
+import Support from "../Pages/Support/Support";
+import Contact from "../Pages/Contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -49,19 +54,40 @@ export const router = createBrowserRouter([
       {
         path: "/books",
         element: (
-          <PrivateRoute>
+         
             <AllBooks></AllBooks>
-          </PrivateRoute>
+          
         ),
       },
+     
       {
         path: "/books/:id",
         element: (
-          <PrivateRoute>
+         
             <BookDetails />
-          </PrivateRoute>
+          
         ),
       },
+       {
+        path:"/about",
+        element: <About></About>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
+      },
+      {
+        path:'/blog',
+        element:<Blog></Blog>
+      },
+      {
+        path:'/privacy',
+        element:<Privacy></Privacy>
+      },
+      {
+        path:'/support',
+        element:<Support></Support>
+      }
       // {
       //   path: "/myProfile",
       //   element: (

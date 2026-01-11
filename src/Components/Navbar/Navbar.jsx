@@ -24,18 +24,33 @@ const Navbar = () => {
       <li>
         <NavLink to={"/books"}>Books</NavLink>
       </li>
+       <li>
+        <NavLink to={"/about"}>About</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/contact"}>Contact</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/blog"}>Blog</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/privacy"}>Privacy</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/support"}>Help & Support</NavLink>
+      </li>
 
       {user && (
         <>
-          <li>
+          {/* <li>
             <NavLink to={"/dashboard/my-orders"}>My Orders</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to={"/dashboard"}>Dashboard</NavLink>
           </li>
-          <li>
-            <NavLink to={"dashboard/my-profile"}>My Profile</NavLink>
-          </li>
+          {/* <li>
+            <NavLink to={"my-profile"}>My Profile</NavLink>
+          </li> */}
         </>
       )}
     </>
