@@ -12,6 +12,7 @@ import Statistics from "./Statistics";
 import Newsletter from "./Newsletter";
 import FAQ from "./FAQ";
 import CallToAction from "./CallToAction";
+import LottieSection from "./LottieSection";
 
 const HomePage = () => {
   return (
@@ -28,6 +29,8 @@ const HomePage = () => {
       <Newsletter></Newsletter>
       <FAQ></FAQ>
       <CallToAction></CallToAction>
+      {/* new section with new technology for PH endgame 5th week sprint */}
+      <LottieSection></LottieSection>
     </div>
   );
 };
