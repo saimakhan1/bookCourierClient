@@ -102,8 +102,12 @@ const Navbar = () => {
       </div>
 
       {/* CENTER: Desktop Links */}
-      <div className="navbar-center hidden lg:flex">
+      {/* <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
+      </div> */}
+      {/*fix menu items in EndGame 5th week sprint*/}
+      <div className="navbar-center hidden lg:flex justify-start mr-16">
+        <ul className="menu menu-horizontal px-0">{links}</ul>
       </div>
 
       {/* RIGHT: Toggle + Profile / Auth Buttons */}
