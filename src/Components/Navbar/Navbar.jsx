@@ -24,7 +24,7 @@ const Navbar = () => {
       <li>
         <NavLink to={"/books"}>Books</NavLink>
       </li>
-       <li>
+      <li>
         <NavLink to={"/about"}>About</NavLink>
       </li>
       <li>
@@ -38,6 +38,12 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to={"/support"}>Help & Support</NavLink>
+      </li>
+      <li>
+        <Link to="/ai-assistant">AI Assistant</Link>
+      </li>
+      <li>
+        <Link to="/explore-books">Explore Books</Link>
       </li>
 
       {user && (

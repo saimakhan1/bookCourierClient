@@ -33,6 +33,8 @@ import Blog from "../Pages/Blog/Blog";
 import Privacy from "../Pages/Privacy/Privacy";
 import Support from "../Pages/Support/Support";
 import Contact from "../Pages/Contact/Contact";
+import AIAssistant from "../Pages/aiAssistant/AIAssistant";
+import BookExplorer from "../Pages/bookExplorer/BookExplorer";
 
 export const router = createBrowserRouter([
   {
@@ -53,41 +55,41 @@ export const router = createBrowserRouter([
       },
       {
         path: "/books",
-        element: (
-         
-            <AllBooks></AllBooks>
-          
-        ),
+        element: <AllBooks></AllBooks>,
       },
-     
+
       {
         path: "/books/:id",
-        element: (
-         
-            <BookDetails />
-          
-        ),
-      },
-       {
-        path:"/about",
-        element: <About></About>
+        element: <BookDetails />,
       },
       {
-        path:"/contact",
-        element:<Contact></Contact>
+        path: "/about",
+        element: <About></About>,
       },
       {
-        path:'/blog',
-        element:<Blog></Blog>
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
-        path:'/privacy',
-        element:<Privacy></Privacy>
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
-        path:'/support',
-        element:<Support></Support>
-      }
+        path: "/privacy",
+        element: <Privacy></Privacy>,
+      },
+      {
+        path: "/support",
+        element: <Support></Support>,
+      },
+      {
+        path: "/ai-assistant",
+        element: <AIAssistant></AIAssistant>,
+      },
+      {
+        path: "/explore-books",
+        element: <BookExplorer></BookExplorer>,
+      },
       // {
       //   path: "/myProfile",
       //   element: (
