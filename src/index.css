@@ -1,8 +1,11 @@
+@import url("https://unpkg.com/leaflet/dist/leaflet.css");
 @import "tailwindcss";
 /* @plugin "daisyui"; */
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark;
+  themes:
+    light --default,
+    dark --prefersdark;
 }
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -16,45 +19,45 @@
 /* -------------------- LIGHT THEME -------------------- */
 [data-theme="light"] {
   /* Primary → Soft Blue */
-  --color-primary: #3b82f6;  /* blue-500 */
+  --color-primary: #3b82f6; /* blue-500 */
   --p: var(--color-primary);
-  --pc: #ffffff;             /* text on primary */
+  --pc: #ffffff; /* text on primary */
 
   /* Secondary → Calm Teal */
-  --color-secondary: #14b8a6;  /* teal-500 */
+  --color-secondary: #14b8a6; /* teal-500 */
   --s: var(--color-secondary);
-  --sc: #ffffff;              /* text on secondary */
+  --sc: #ffffff; /* text on secondary */
 
   /* Accent → Vibrant Orange */
-  --color-accent: #f97316;   /* orange-500 */
+  --color-accent: #f97316; /* orange-500 */
   --a: var(--color-accent);
-  --ac: #ffffff;              /* text on accent */
+  --ac: #ffffff; /* text on accent */
 
   /* Neutral → Dark Gray for text / UI */
-  --color-neutral: #374151;  /* slate-700 */
+  --color-neutral: #374151; /* slate-700 */
   --n: var(--color-neutral);
-  --nc: #f9fafb;             /* text/content on neutral */
+  --nc: #f9fafb; /* text/content on neutral */
 }
 
 /* -------------------- DARK THEME -------------------- */
 [data-theme="dark"] {
   /* Primary → Dark Blue */
-  --color-primary: #1e3a8a;  /* blue-900 */
+  --color-primary: #1e3a8a; /* blue-900 */
   --p: var(--color-primary);
-  --pc: #ffffff;              /* text on primary */
+  --pc: #ffffff; /* text on primary */
 
   /* Secondary → Deep Teal */
-  --color-secondary: #0f766e;  /* teal-800 */
+  --color-secondary: #0f766e; /* teal-800 */
   --s: var(--color-secondary);
-  --sc: #ffffff;              /* text on secondary */
+  --sc: #ffffff; /* text on secondary */
 
   /* Accent → Bright Orange */
-  --color-accent: #ea580c;    /* orange-600 */
+  --color-accent: #ea580c; /* orange-600 */
   --a: var(--color-accent);
-  --ac: #ffffff;              /* text on accent */
+  --ac: #ffffff; /* text on accent */
 
   /* Neutral → Light Gray for text / UI */
-  --color-neutral: #d1d5db;  /* slate-300 */
+  --color-neutral: #d1d5db; /* slate-300 */
   --n: var(--color-neutral);
-  --nc: #111827;             /* text/content on neutral background */
+  --nc: #111827; /* text/content on neutral background */
 }

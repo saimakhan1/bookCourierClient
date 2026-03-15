@@ -45,6 +45,12 @@ const Navbar = () => {
       <li>
         <Link to="/explore-books">Explore Books</Link>
       </li>
+      <li>
+        <Link to="/mood-explorer">Explore by Mood</Link>
+      </li>
+      {/* <li>
+        <Link to="/delivery-map">Coverage Map</Link>
+      </li> */}
 
       {user && (
         <>

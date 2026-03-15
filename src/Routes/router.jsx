@@ -35,6 +35,8 @@ import Support from "../Pages/Support/Support";
 import Contact from "../Pages/Contact/Contact";
 import AIAssistant from "../Pages/aiAssistant/AIAssistant";
 import BookExplorer from "../Pages/bookExplorer/BookExplorer";
+import DeliveryMap from "../Pages/coverage/DeliveryMap";
+import MoodExplorer from "../Pages/moodExplorer/MoodExplorer";
 
 export const router = createBrowserRouter([
   {
@@ -89,6 +91,14 @@ export const router = createBrowserRouter([
       {
         path: "/explore-books",
         element: <BookExplorer></BookExplorer>,
+      },
+      {
+        path: "/delivery-map",
+        element: <DeliveryMap></DeliveryMap>,
+      },
+      {
+        path: "/mood-explorer",
+        element: <MoodExplorer></MoodExplorer>,
       },
       // {
       //   path: "/myProfile",
