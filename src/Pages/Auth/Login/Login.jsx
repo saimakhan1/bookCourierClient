@@ -80,7 +80,6 @@
 
 // export default Login;
 
-
 // import React, { useState } from "react";
 // import { useForm } from "react-hook-form";
 // import useAuth from "../../../hooks/useAuth";
@@ -206,7 +205,6 @@
 
 // export default Login;
 
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../hooks/useAuth";
@@ -295,14 +293,18 @@ const Login = () => {
           )}
 
           {/* Auth Error */}
-          {authError && <p className="text-red-500 text-sm mt-2">{authError}</p>}
+          {authError && (
+            <p className="text-red-500 text-sm mt-2">{authError}</p>
+          )}
 
           <div>
             <a className="link link-hover">Forgot password?</a>
           </div>
 
           {/* Normal Login */}
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button className="btn btn-neutral mt-4 dark:bg-gray-700 dark:text-white dark:border-gray-600">
+            Login
+          </button>
 
           {/* Demo Login */}
           <button

@@ -135,7 +135,9 @@ const Register = () => {
             </p>
           )}
           <div></div>
-          <button className="btn btn-neutral mt-4">Register</button>
+          <button className="btn btn-neutral mt-4 dark:bg-primary dark:text-white dark:border-primary">
+            Register
+          </button>
         </fieldset>
 
         <p>
