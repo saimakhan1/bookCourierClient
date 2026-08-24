@@ -71,17 +71,25 @@ const Footer = () => {
             </h3>
             <div className="flex items-center space-x-6">
               {/* Social icons here */}
-              <a href="https://www.facebook.com/hashtag/bookcourier/?_rdr"><BsFacebook></BsFacebook></a>
+              <a href="https://www.facebook.com/hashtag/bookcourier/?_rdr">
+                <BsFacebook></BsFacebook>
+              </a>
 
-              <a href="https://www.instagram.com/bookcourier/"><BsInstagram></BsInstagram></a>
-              <a href="https://fr.pinterest.com/pin/594686325789374515/"><BsPinterest></BsPinterest></a>
-              <a href="https://x.com/expressairlogis"><BsTwitter></BsTwitter></a>
+              <a href="https://www.instagram.com/bookcourier/">
+                <BsInstagram></BsInstagram>
+              </a>
+              <a href="https://fr.pinterest.com/pin/594686325789374515/">
+                <BsPinterest></BsPinterest>
+              </a>
+              <a href="https://x.com/expressairlogis">
+                <BsTwitter></BsTwitter>
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-10 pt-5 text-center text-sm text-gray-600 dark:text-gray-400">
-          © 2026 BookCourier. All rights reserved.
+          © 2026 BookCourier. All rights reserved. |Saima Khan| WEB12-0894
         </div>
       </footer>
     </div>
